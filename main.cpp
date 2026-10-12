@@ -29,11 +29,27 @@ for (int i = 0; i < 5; ++i){
     }
   }
 
- cout << "sum: " << quizsum << "\nHigh: " << quizhigh;
+ cout << "Sum: " << quizsum << "\nHigh: " << quizhigh << endl;
 // Output should be 366 for the sum and 91 for the high
 
 
   int lab[N] = { 88, 88, 88, 88, 88 };
+  int labsum = 0;
+  int labhigh = lab[0];
 
+  cout << "Lab\n";
+  for (int i = 0; i < 5; ++i){
+    cout << "[" << i << "] " << lab[i] << endl;
+  }
+  
+  
+  for (int i = 0; i < N; ++i){
+    labsum += lab[i];
+    if (lab[i] > labhigh){
+      labhigh = lab[i];
+    }
+  }
+  cout << "Sum: " << labsum << "\nHigh: " << labhigh << endl;
+// Output should be 440 for sum and 88 for high
   return 0;
 }
